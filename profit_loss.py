@@ -20,7 +20,7 @@ def ComputeProfitAndLos(file):
         print("[NET PRFIT DEFICIT] NET PROFIT ON EACH DAY IS LOWER THAN THE PREVIOUS DAY")
         print(f"[HIGHEST PRFOIT DEFICIT] DAY: {top3Highest[0][1]} AMOUNT: SGD{top3Highest[0][0]}")
         file.write("[NET PROFIT DEFICIT] NET PROFIT ON EACH DAY IS LOWER THAN THE PREVIOUS DAY\n")
-    elif(trend == "Fluctuating")
+    elif(trend == "Fluctuating"):
         for item in dailyNegList:
             print(f"[NET PROFIT DEFICIT] DAY: {item[1]} AMOUNT: SGD{item[0]}")
             file.write(f"[NET PROFIT DEFICIT] DAY: {item[1]} AMOUNT: SGD{item[0]}\n")
