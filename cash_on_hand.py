@@ -17,3 +17,8 @@ def ComputCOH(file):
         print(f'[HIGHEST CASH SURPLUS] DAY: {top3Highest[0][1]} AMOUNT: SGD{top3Highest[0][0]}')
         file.write('[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY\n')
         file.write(f'[HIGHEST CASH SURPLUS] DAY: {top3Highest[0][1]} AMOUNT: SGD{top3Highest[0][0]}\n')
+    elif(trend == "Decreasing"):
+        print('[CASH DEFICIT] CASH ON EACH DAY IS LOWER THAN THE PREVIOUS DAY')
+        print(f'[HIGHEST CASH DEFICIT] DAY: {top3Highest[0][1]} AMOUNT: {top3Highest[0][0]}')
+        file.write('[CASH DEFICIT] CASH ON EACH DAY IS LOWER THAN THE PREVIOUS DAY\n')
+        file.write(f'[HIGHEST CASH DEFICIT] DAY: {top3Highest[0][1]} AMOUNT: SGD{top3Highest[0][0]}')
