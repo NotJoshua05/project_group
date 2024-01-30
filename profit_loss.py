@@ -11,17 +11,17 @@ def ComputeProfitAndLos(file):
     top3Highest=()
     top3Highest= top3List(dailyDiffList,trend)
     #print(top3Highest)
-    for trend in dailyDiffList:
-        print("[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY)
+    if(trend == "Increasing"):
+        print("[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY")
         print(f"HIGHEST NET PROFIT SURPLUS] DAY: {top3Highest[0][1]} AMOUNT: SGD{top3Highest[0][0]}")
         file.write("[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY\n")
         file.write(f"[HIGHEST NET PROFIT SURPLUS] DAY:{top3Highest[0][1]} AMOUNT: SGD{top3Highest[0][0]}\n")
-    elif(trend=="Decreasing"):
+    elif(trend == "Decreasing"):
         print("[NET PRFIT DEFICIT] NET PROFIT ON EACH DAY IS LOWER THAN THE PREVIOUS DAY")
         print(f"[HIGHEST PRFOIT DEFICIT] DAY: {top3Highest[0][1]} AMOUNT: SGD{top3Highest[0][0]}")
         file.write("[NET PROFIT DEFICIT] NET PROFIT ON EACH DAY IS LOWER THAN THE PREVIOUS DAY\n")
-    elif(trend=="Fluctuating")
-        for item in DailyNegList:
+    elif(trend == "Fluctuating")
+        for item in dailyNegList:
             print(f"[NET PROFIT DEFICIT] DAY: {item[1]} AMOUNT: SGD{item[0]}")
             file.write(f"[NET PROFIT DEFICIT] DAY: {item[1]} AMOUNT: SGD{item[0]}\n")
         print (f"[HIGHEST NET PROFIT DEFICIT] DAY:{top3Highest[0][1]} AMOUNT: SGD{top3Highest[0][0]}")
