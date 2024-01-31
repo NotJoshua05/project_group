@@ -1,7 +1,7 @@
 from common import readcsv, getDailyDiff, findTrend, getNegativeDaily, top3List
-def ComputCOH(file):
+def ComputeCOH(file):
     CashOnHand = []
-    CashOnHand = readcsv("Cash-On-Hand.csv")
+    CashOnHand = readcsv("Cash_On_Hand.csv")
     #dailyDiffList = getDailyCOHDiff(CashOnHand)
     dailyDiffList = getDailyDiff(0, 1, CashOnHand)
     trend = findTrend(dailyDiffList)

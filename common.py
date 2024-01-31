@@ -4,7 +4,7 @@ import csv
 def readcsv(filename):
     csvdata=[]
 #create a path object for text.txt
-    file_path = Path.cwd()/"csv.reports"/filename
+    file_path = Path.cwd()/"csv_reports"/filename
 # open file with .open() to return a file object
 # create 'reader' object and print line if file path exists
     with file_path.open(mode = "r", encoding='UTF-8') as file:
