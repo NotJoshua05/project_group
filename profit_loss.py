@@ -31,5 +31,5 @@ def ComputeProfitAndLos(file):
         file.write (f"[HIGHEST NET PROFIT DEFICIT] DAY:{top3Highest[0][1]} AMOUNT: SGD{top3Highest[0][0]}\n")
         file.write (f"[2ND HIGHEST NET PROFIT DEFICIT] DAY:{top3Highest[1][1]} AMOUNT: SGD{top3Highest[1][0]}\n")
         file.write (f"[3RD HIGHEST NET PROFIT DEFICIT] DAY:{top3Highest[2][1]} AMOUNT: SGD{top3Highest[2][0]}\n")
-        file.write("[sgd:{}]")
+        
         
