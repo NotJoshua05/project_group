@@ -2,7 +2,7 @@ from common import readcsv,findTrend,top3List,getDailyDiff,getNegativeDaily
 
 def ComputeProfitAndLos(file):
     netprofit = []
-    netprofit = readcsv("Profits_and_Loss.csv")
+    netprofit = readcsv("Profits_and_Loss_dummy_data_deficit.csv")
     #dailyDiffList = getDailyCOHDiff(CashOnHand)
     dailyDiffList= getDailyDiff(0,4,netprofit)
     dailyNegList = getNegativeDaily(dailyDiffList)
@@ -18,7 +18,7 @@ def ComputeProfitAndLos(file):
         file.write(f"[HIGHEST NET PROFIT SURPLUS] DAY:{top3Highest[0][1]}, AMOUNT: SGD{top3Highest[0][0]}\n")
     elif(trend == "Decreasing"): 
         print("[NET PROFIT DEFICIT] NET PROFIT ON EACH DAY IS LOWER THAN THE PREVIOUS DAY")
-        print(f"[HIGHEST PRFOIT DEFICIT] DAY: {top3Highest[0][1]}, AMOUNT: SGD{top3Highest[0][0]}")
+        print(f"[HIGHEST PROFIT DEFICIT] DAY: {top3Highest[0][1]}, AMOUNT: SGD{top3Highest[0][0]}")
         file.write("[NET PROFIT DEFICIT] NET PROFIT ON EACH DAY IS LOWER THAN THE PREVIOUS DAY\n")
         file.write(f"[HIGHEST PROFIT DEFICIT] DAY: {top3Highest[0][1]}, AMOUNT: SGD{top3Highest[0][0]}\n")
     elif(trend == "Fluctuating"):
