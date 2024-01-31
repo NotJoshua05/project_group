@@ -2,7 +2,7 @@ from common import readcsv,findTrend,top3List,getDailyDiff,getNegativeDaily
 
 def ComputeProfitAndLos(file):
     netprofit = []
-    netprofit = readcsv("Profits_and_Loss_dummy_data_deficit.csv")
+    netprofit = readcsv("Profits_and_Loss.csv")
     #dailyDiffList = getDailyCOHDiff(CashOnHand)
     dailyDiffList= getDailyDiff(0,4,netprofit)
     dailyNegList = getNegativeDaily(dailyDiffList)
